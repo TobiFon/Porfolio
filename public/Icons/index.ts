@@ -1,0 +1,17 @@
+export { default as Api } from "./api-settings-svgrepo-com.svg";
+export { default as Css } from "./css-3-svgrepo-com.svg";
+export { default as Django } from "./django-icon-svgrepo-com.svg";
+export { default as Framer } from "./framer-svgrepo-com.svg";
+export { default as Git } from "./git-svgrepo-com.svg";
+export { default as Html } from "./html-5-svgrepo-com.svg";
+export { default as Javascript } from "./javascript-svgrepo-com.svg";
+export { default as Jest } from "./jest-snapshot-svgrepo-com.svg";
+export { default as Next } from "./nextjs-svgrepo-com.svg";
+export { default as Postgres } from "./postgresql-svgrepo-com.svg";
+export { default as Python } from "./python-svgrepo-com.svg";
+export { default as ReactJS } from "./react-svgrepo-com.svg";
+export { default as Redux } from "./redux-svgrepo-com.svg";
+export { default as Sql } from "./sql-svgrepo-com.svg";
+export { default as Tailwind } from "./tailwind-svgrepo-com.svg";
+export { default as VsCode } from "./vs-code-svgrepo-com.svg";
+export { default as Typescript } from "./typescript.svg";
