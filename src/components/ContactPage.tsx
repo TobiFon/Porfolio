@@ -8,9 +8,8 @@ const ContactPage = () => {
       <div className=" w-full">
         <h2 className="text-center text-5xl">Get in touch </h2>
       </div>
-      <div className="w-full flex flex-col justify-center items-center">
-        <ContactForm />
-      </div>
+
+      <ContactForm />
     </section>
   );
 };
