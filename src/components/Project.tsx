@@ -14,7 +14,7 @@ interface ProjectProps {
 const Project = ({ title, img, description, index }: ProjectProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [0, 1], [-400, 400]);
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
   return (
     <section
       className="h-[85vh] flex justify-center items-center snap-center"

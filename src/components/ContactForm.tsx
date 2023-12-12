@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldErrors, useForm } from "react-hook-form";
 import * as z from "zod";
-import { useForm as spreeForm } from "@formspree/react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -46,22 +45,40 @@ export function ContactForm() {
       Email: "",
       Message: "",
     },
+    mode: "onTouched",
   });
-  const [handleSubmit] = spreeForm("xdorqjoa");
 
-  const onSubmit = (data: Form) => {
-    handleSubmit;
-    console.log(data);
+  const onSubmit = async (data: Form) => {
+    try {
+      const response = await fetch("https://formspree.io/xdorqjoa", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        // Handle success
+        form.reset();
+        setOpen(true);
+      } else {
+        // Handle error
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+    }
   };
   const onerror = (errors: FieldErrors<Form>) => {
     console.log(errors);
   };
-  useEffect(() => {
+  /* useEffect(() => {
     if (form.formState.isSubmitSuccessful) {
       form.reset();
       setOpen(true);
     }
-  }, [form, form.formState.isSubmitSuccessful, form.reset, setOpen]);
+  }, [form, form.formState.isSubmitSuccessful, form.reset, setOpen]); */
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <Modal open={open} setOpen={setOpen} />
