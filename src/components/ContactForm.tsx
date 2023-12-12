@@ -53,6 +53,8 @@ export function ContactForm() {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 w-full lg:w-3/6"
+        method="POST"
+        data-netlify="true"
       >
         <FormField
           control={form.control}
