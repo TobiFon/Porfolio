@@ -28,14 +28,14 @@ export default function AboutTabs() {
           </CardHeader>
           <CardContent className="space-y-4 text-base lg:text-lg">
             <p className="">
-              Call me Tobi, I'm a web developer currently based in Cameroon. I'm
-              passionate about building for the web and providing solutions to
-              users by building accessible products.
+              Call me Tobi, I am a web developer currently based in Cameroon. I
+              am passionate about building for the web and providing solutions
+              to users by building accessible products.
             </p>
             <p className="">
-              I'm a self thaught developer even though I did study computer
+              I am a self thaught developer even though I did study computer
               science at Xihua university in china for 3 years before returning
-              home due to covid. So since 2023 i've been learning and
+              home due to covid. So since 2023 i hsve been learning and
               pepertually getting better at my craft while running my own local{" "}
               <Link className="text-primary-100" href={"#"}>
                 web agency

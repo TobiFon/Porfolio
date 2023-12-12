@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Bruno_Ace } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 
-const inter = Bruno_Ace({
-  weight: "400",
+const inter = Inter({
   subsets: ["latin"],
 });
 
