@@ -70,7 +70,7 @@ export function ContactForm() {
           onSubmit={form.handleSubmit(onSubmit, onerror)}
           className="space-y-4 w-full lg:w-3/6"
           method="POST"
-          data-netlify="true"
+          action={"https://formspree.io/f/xdorqjoa"}
         >
           <FormField
             control={form.control}
