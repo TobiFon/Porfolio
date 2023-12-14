@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import Project from "./Project";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Target } from "lucide-react";
 const Projects = [
   {
     title: "Project 1",
@@ -91,15 +90,16 @@ const Projects = [
 ];
 const ProjectsPage = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
+  const { scrollYProgress } = useScroll({ target: ref });
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
   });
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
   return (
     <motion.div ref={ref}>
       <div className="relative">
-        <div className=" sticky text-center top-0 pt-14 bg-bg- bg-opacity-5 space-y-4">
+        <div className=" z-10 fixed left-0 right-0 top-2 text-center pt-14 bg-bg- bg-opacity-5 space-y-4">
           <h1 className=" text-3xl font-semibold text-primary-100 ">
             Some Of My Favourite Work
           </h1>
@@ -120,7 +120,6 @@ const ProjectsPage = () => {
           ))}
         </div>
       </div>
-      <section className="h-screen snap-center"> </section>
     </motion.div>
   );
 };

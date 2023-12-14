@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import Header from "@/components/Header";
+import AnimateP from "@/components/AnimateP";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,13 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="snap-y snap-mandatory scroll-smooth ">
-      <body
-        className={`${inter.className} container selection:bg-primary-200/90 max-w-7xl`}
-      >
-        <NavBar />
-        <Header />
-        {children}
+    <html lang="en">
+      <body className={`${inter.className}  selection:bg-primary-200/90`}>
+        <AnimateP>
+          <NavBar />
+          {children}
+        </AnimateP>
       </body>
     </html>
   );

@@ -46,6 +46,9 @@
   }
 }
 @layer utilities {
+  html {
+    scroll-snap-type: y mandatory;
+  }
   .img-container div {
     overflow: hidden;
   }
@@ -68,5 +71,8 @@
   .img-container:hover div:nth-child(n) {
     transform: translate(0, 0);
     opacity: 1;
+  }
+  .perspective {
+    perspective: 500px;
   }
 }
