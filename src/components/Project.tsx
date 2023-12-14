@@ -26,7 +26,13 @@ const Project = ({ title, img, description, index }: ProjectProps) => {
         } gap-10 items-center relative flex xl:p-24`}
       >
         <div className=" aspect-auto pr-5 ">
-          <Image src={img} alt="project image" height={500} width={500} />
+          <Image
+            src={img}
+            alt="project image"
+            height={500}
+            width={500}
+            quality={50}
+          />
         </div>
         <motion.div
           className="lg:w-[30rem] space-y-3 w-1/2 max-md:absolute max-md:bg-bg-200 max-md:bg-opacity-70 max-md:-right-1 max-md:text-center max-md:w-2/3"

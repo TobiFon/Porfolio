@@ -73,12 +73,7 @@ export function ContactForm() {
   const onerror = (errors: FieldErrors<Form>) => {
     console.log(errors);
   };
-  /* useEffect(() => {
-    if (form.formState.isSubmitSuccessful) {
-      form.reset();
-      setOpen(true);
-    }
-  }, [form, form.formState.isSubmitSuccessful, form.reset, setOpen]); */
+
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <Modal open={open} setOpen={setOpen} />

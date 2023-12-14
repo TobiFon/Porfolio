@@ -5,18 +5,18 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className=" flex items-center justify-between  align-baseline py-4 ">
+    <header className=" flex items-center justify-between   py-4 ">
       <Link href="/">
         <div className=" h-10 w-24">{<Logo className=" h-full w-full " />}</div>
       </Link>
-      <div className="flex gap-3">
-        <Link href={"#"}>
-          <Linkedin className="socials" />
-        </Link>
-        <Link href={"#"}>
+      <div className="flex gap-3 h-full align-bottom">
+        <Link href={"#"} className="h-full">
           <Github className="socials" />
         </Link>
-        <Link href={"#"}>
+        <Link href={"#"} className="h-full">
+          <Linkedin className="socials" />
+        </Link>
+        <Link href={"#"} className="h-full">
           <Mail className="socials" />
         </Link>
       </div>
