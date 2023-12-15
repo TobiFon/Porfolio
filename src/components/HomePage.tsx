@@ -1,12 +1,44 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+
+      transition: {
+        staggerChildren: 0.5,
+        delay: 1,
+        duration: 1,
+      },
+    },
+  };
+  const items = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+    },
+  };
   return (
     <main className="flex h-full items-center justify-center ">
-      <div className=" max-w-3xl max-lg:mb-10 ">
-        <div className="mb-6 flex flex-col space-y-4  whitespace-nowrap text-center leading-normal ">
+      <motion.div
+        variants={variants}
+        animate="animate"
+        initial="initial"
+        className=" max-w-3xl max-lg:mb-10 "
+      >
+        <motion.div
+          variants={items}
+          className="mb-6 flex flex-col space-y-4  whitespace-nowrap text-center leading-normal "
+        >
           <small className="text-sm font-medium leading-none text-primary-100">
             Hi, my name is
           </small>
@@ -19,8 +51,11 @@ const HomePage = () => {
           <p className="leading-7 [&:not(:first-child)]:mt-6">
             I love building cool things for the internet.
           </p>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-5">
+        </motion.div>
+        <motion.div
+          variants={items}
+          className="flex flex-col lg:flex-row justify-between gap-5"
+        >
           <Button size={"lg"}>
             Download My Cv <DownloadIcon className="ml-2" />
           </Button>
@@ -31,8 +66,8 @@ const HomePage = () => {
           >
             Get in Touch
           </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </main>
   );
 };

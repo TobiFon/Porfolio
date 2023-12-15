@@ -96,10 +96,39 @@ const ProjectsPage = () => {
     damping: 30,
     restDelta: 0.001,
   });
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+        delay: 0.5,
+        duration: 0.7,
+      },
+    },
+  };
+  const items = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+    },
+  };
   return (
-    <motion.div ref={ref}>
-      <div className="relative">
-        <div className=" z-10 fixed left-0 right-0 top-2 text-center pt-14 bg-bg- bg-opacity-5 space-y-4">
+    <div ref={ref}>
+      <motion.div
+        variants={variants}
+        animate="animate"
+        initial="initial"
+        className="relative"
+      >
+        <motion.div
+          variants={items}
+          className=" z-10 fixed left-0 right-0 top-2 text-center pt-14 bg-bg- bg-opacity-5 space-y-4"
+        >
           <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary-100">
             Some Of My Favourite Work
           </h2>
@@ -107,8 +136,8 @@ const ProjectsPage = () => {
             className=" h-2 bg-text-100"
             style={{ scaleX }}
           ></motion.div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={items}>
           {Projects.map((project, index) => (
             <Project
               key={index}
@@ -118,9 +147,9 @@ const ProjectsPage = () => {
               description={project.description}
             />
           ))}
-        </div>
-      </div>
-    </motion.div>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

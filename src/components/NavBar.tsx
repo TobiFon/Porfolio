@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Home, User, Columns, PhoneCall } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 type navItemsProps = {
   id: number;
@@ -41,8 +42,14 @@ const navItems: navItemsProps[] = [
 const NavBar = () => {
   const pathname = usePathname();
   console.log(pathname);
+
   return (
-    <nav className="fixed bottom-0 right-0 mt-auto flex w-full flex-col items-center xl:left-[2%] xl:top-0 xl:w-24 xl:justify-center z-50">
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="fixed bottom-0 right-0 mt-auto flex w-full flex-col items-center xl:left-[2%] xl:top-0 xl:w-24 xl:justify-center z-50"
+    >
       <div className="flex h-16 w-full items-center justify-around gap-5 bg-bg-300/50  p-6 xl:h-96 xl:w-16 xl:flex-col xl:justify-around xl:rounded-full xl:p-4">
         {navItems.map((item) => {
           return (
@@ -61,7 +68,7 @@ const NavBar = () => {
           );
         })}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
