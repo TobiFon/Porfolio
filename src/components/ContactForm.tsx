@@ -89,7 +89,9 @@ export function ContactForm() {
             name="Name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="lg:text-xl">Name</FormLabel>
+                <FormLabel className="leading-7 [&:not(:first-child)]:mt-6">
+                  Name
+                </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Name"
@@ -107,7 +109,9 @@ export function ContactForm() {
             name="Email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="lg:text-xl">Email</FormLabel>
+                <FormLabel className="leading-7 [&:not(:first-child)]:mt-6">
+                  Email
+                </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Email"
@@ -125,7 +129,9 @@ export function ContactForm() {
             name="Message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="lg:text-xl">Message</FormLabel>
+                <FormLabel className="leading-7 [&:not(:first-child)]:mt-6">
+                  Message
+                </FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Message"
@@ -140,7 +146,8 @@ export function ContactForm() {
           />
           <Button
             type="submit"
-            className="lg:px-8 lg:py-6 lg:text-base rounded-md w-full"
+            size={"lg"}
+            className=" w-full"
             disabled={
               !form.formState.isDirty ||
               !form.formState.isValid ||

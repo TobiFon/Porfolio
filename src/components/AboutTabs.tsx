@@ -24,15 +24,18 @@ export default function AboutTabs() {
       <TabsContent value="about">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl"> A Little About Me</CardTitle>
+            <CardTitle className="scroll-m-20 text-2xl font-semibold tracking-tight">
+              {" "}
+              A Little About Me
+            </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 text-base lg:text-lg">
-            <p className="">
+          <CardContent>
+            <p className="leading-7 [&:not(:first-child)]:mt-6">
               Call me Tobi, I am a web developer currently based in Cameroon. I
               am passionate about building for the web and providing solutions
               to users by building accessible products.
             </p>
-            <p className="">
+            <p className="leading-7 [&:not(:first-child)]:mt-6">
               I am a self thaught developer even though I did study computer
               science at Xihua university in china for 3 years before returning
               home due to covid. So since 2023 i hsve been learning and
@@ -44,9 +47,8 @@ export default function AboutTabs() {
             </p>
           </CardContent>
           <CardFooter>
-            <Button className="lg:px-8 lg:py-6 lg:text-base rounded-md">
-              Download my CV
-              <DownloadIcon className="ml-3" />
+            <Button size={"lg"}>
+              Download My Cv <DownloadIcon className="ml-2" />
             </Button>
           </CardFooter>
         </Card>

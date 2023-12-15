@@ -6,30 +6,30 @@ const HomePage = () => {
   return (
     <main className="flex h-full items-center justify-center ">
       <div className=" max-w-3xl max-lg:mb-10 ">
-        <div className="mb-5 flex flex-col space-y-3 whitespace-nowrap text-center leading-normal lg:mb-8 lg:space-y-5">
-          <h5 className="text-sm text-primary-100 lg:text-base">
+        <div className="mb-6 flex flex-col space-y-4  whitespace-nowrap text-center leading-normal ">
+          <small className="text-sm font-medium leading-none text-primary-100">
             Hi, my name is
-          </h5>
-          <h1 className="text-5xl font-extrabold text-text-100 lg:text-8xl">
+          </small>
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Tobi Fon.
           </h1>
-          <h2 className=" text-2xl font-semibold tracking-widest text-text-100 lg:text-4xl">
+          <h2 className="scroll-m-20  text-3xl font-semibold tracking-tight first:mt-0">
             <span className="text-primary-100">Full-Stack</span> developer.
           </h2>
-          <h3 className="text-lg text-text-200 lg:text-2xl">
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
             I love building cool things for the internet.
-          </h3>
+          </p>
         </div>
-        <div className="flex justify-between">
-          <Button className="lg:px-8 lg:py-6 lg:text-base rounded-md">
-            Download my CV
-            <DownloadIcon className="ml-3" />
+        <div className="flex flex-col lg:flex-row justify-between gap-5">
+          <Button size={"lg"}>
+            Download My Cv <DownloadIcon className="ml-2" />
           </Button>
           <Button
-            className="lg:px-8 lg:py-6 lg:text-base rounded-md "
-            variant={"ghost"}
+            size={"lg"}
+            variant={"secondary"}
+            className=" bg-bg-300 text-text-100"
           >
-            Get in touch
+            Get in Touch
           </Button>
         </div>
       </div>

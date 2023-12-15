@@ -100,9 +100,9 @@ const ProjectsPage = () => {
     <motion.div ref={ref}>
       <div className="relative">
         <div className=" z-10 fixed left-0 right-0 top-2 text-center pt-14 bg-bg- bg-opacity-5 space-y-4">
-          <h1 className=" text-3xl font-semibold text-primary-100 ">
+          <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary-100">
             Some Of My Favourite Work
-          </h1>
+          </h2>
           <motion.div
             className=" h-2 bg-text-100"
             style={{ scaleX }}
