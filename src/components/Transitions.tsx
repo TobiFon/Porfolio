@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Transitions = () => {
   const transitionVariants = {
@@ -12,29 +13,27 @@ const Transitions = () => {
       x: "0%",
       width: "0%",
     },
-    exit: {
-      x: ["0%", "100%"],
-      width: ["0%", "100%"],
-    },
   };
+  const pathname = usePathname();
 
   return (
     <>
       <motion.div
         variants={transitionVariants}
+        key={pathname}
         initial="initial"
         animate="animate"
-        exit="exit"
-        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-        className="w-screen h-screen right-full top-0 bottom-0 bg-bg- z-[999999] fixed"
+        transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
+        className="w-screen h-screen right-full top-0 bottom-0 bg-primary-100 z-[999999] fixed"
       ></motion.div>
+
       <motion.div
         variants={transitionVariants}
         initial="initial"
         animate="animate"
-        exit="exit"
-        transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-        className="w-screen h-screen right-full top-0 bottom-0 bg-primary-100 z-[999999] fixed"
+        key={pathname}
+        transition={{ delay: 0, duration: 1, ease: "easeOut" }}
+        className="w-screen h-screen right-full top-0 bottom-0 bg-bg- z-[999999] fixed"
       ></motion.div>
     </>
   );

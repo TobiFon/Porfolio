@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import AnimateP from "@/components/AnimateP";
+import Transitions from "@/components/Transitions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,10 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}  selection:bg-primary-200/90`}>
-        <AnimateP>
-          <NavBar />
-          {children}
-        </AnimateP>
+        <Transitions />
+        <NavBar />
+        {children}
       </body>
     </html>
   );
