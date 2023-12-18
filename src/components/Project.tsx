@@ -36,7 +36,7 @@ const Project = ({ title, img, description, index }: ProjectProps) => {
           />
         </div>
         <motion.div
-          className="lg:w-[30rem] space-y-3 w-1/2 max-md:absolute max-md:bg-bg- max-md:bg-opacity-70 max-md:-right-1 max-md:text-center max-md:w-2/3"
+          className="lg:w-[30rem] space-y-3 w-1/2 max-md:absolute max-md:bg-bg- max-md:bg-opacity-70 max-md:-right-1 max-md:text-center max-md:w-2/3 max-md:snap-normal"
           style={{ y }}
         >
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">

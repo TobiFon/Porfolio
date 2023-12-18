@@ -7,8 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DownloadIcon } from "lucide-react";
 import Link from "next/link";
@@ -30,7 +29,7 @@ export default function AboutTabs() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="leading-7 [&:not(:first-child)]:mt-6">
+            <p className="leading-7 ">
               Call me Tobi, I am a web developer currently based in Cameroon. I
               am passionate about building for the web and providing solutions
               to users by building accessible products.
@@ -58,7 +57,7 @@ export default function AboutTabs() {
           <CardHeader>
             <CardTitle></CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2">
+          <CardContent className="">
             <Skills />
           </CardContent>
           <CardFooter></CardFooter>

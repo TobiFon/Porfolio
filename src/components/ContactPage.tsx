@@ -30,7 +30,7 @@ const ContactPage = () => {
       variants={variants}
       animate="animate"
       initial="initial"
-      className=" min-h-[75vh] flex flex-col justify-center w-full items-center space-y-8 max-lg:mb-20"
+      className=" min-h-[75vh] flex flex-col justify-center w-full items-center space-y-8 max-lg:mb-20 p-5"
     >
       <motion.div variants={items} className=" w-full">
         <h2 className="scroll-m-20 text-primary pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
