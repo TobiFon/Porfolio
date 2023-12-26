@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import Project from "./Project";
 import { motion, useScroll, useSpring } from "framer-motion";
+
 const Projects = [
   {
     title: "Project 1",
@@ -117,6 +118,7 @@ const ProjectsPage = () => {
       opacity: 1,
     },
   };
+
   return (
     <div ref={ref}>
       <motion.div

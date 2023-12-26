@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 
 const formSchema = z.object({

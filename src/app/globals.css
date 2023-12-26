@@ -47,7 +47,7 @@
 }
 @layer utilities {
   html {
-    scroll-snap-type: y mandatory;
+    scroll-behavior: initial;
   }
   .img-container div {
     overflow: hidden;

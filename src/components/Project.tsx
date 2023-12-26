@@ -16,10 +16,13 @@ function useParallax(value: MotionValue<number>, distance: number) {
 
 const Project = ({ title, img, description, index }: ProjectProps) => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end start", "start end"],
+  });
   const y = useParallax(scrollYProgress, 300);
   return (
-    <section className="h-[100vh] flex justify-center items-center snap-center perspective md:p-8">
+    <section className="h-[100vh] flex justify-center items-center md:p-8">
       <div
         className={`${
           index % 2 == 0 ? "flex-row" : "flex-row-reverse"
